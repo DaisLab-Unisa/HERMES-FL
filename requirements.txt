@@ -1,0 +1,34 @@
+# Requirements for HERMES-FL (star/ and hierarchical/ topologies).
+# Python 3.11; a CUDA-capable GPU is strongly recommended.
+#
+# torch/torchvision are NOT installable from plain PyPI with CUDA support —
+# install them first from PyTorch's CUDA index, then install the rest of this
+# file:
+#
+#   pip install torch==2.10.0 torchvision==0.25.0 --index-url https://download.pytorch.org/whl/cu126
+#   pip install -r requirements.txt
+#
+# (cu126 matches the environment the experiments were run with; other CUDA
+# builds of the same torch/torchvision versions also work.)
+
+flask==2.0.3
+flask-socketio==5.1.1
+python-socketio==5.3.0
+python-engineio==4.9.1
+eventlet==0.35.2
+werkzeug==2.0.3
+websocket-client==1.9.0
+
+numpy==1.26.4
+pandas==2.2.1
+scikit-learn==1.5.0
+pillow==10.3.0
+requests==2.32.3
+tqdm==4.66.4
+tenseal==0.3.16
+
+# Figures (scripts/): matplotlib 3.10.9 is required to reproduce the published
+# figures pixel by pixel; PyMuPDF renders the PNG previews from the PDFs.
+matplotlib==3.10.9
+seaborn==0.13.2
+pymupdf==1.24.14

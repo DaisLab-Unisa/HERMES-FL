@@ -1,0 +1,283 @@
+{
+  "ip_address": "127.0.0.1",
+  "central_port": 5010,
+  "gpu_blacklist": [],
+  "num_parallel_executions": 1,
+  "base_csv_path": "../results/results_hierarchical/csv",
+  "base_log_path": "../results/results_hierarchical/log",
+  "heavy_client_threshold": 8,
+  "base_plot_path": "static/plots",
+  "base_split_data_path": "../results/results_hierarchical/run_dataset",
+  "round_timeout": 1800,
+  "server_startup_timeout": 600,
+  "server_ready_timeout": 180,
+  "server_join_timeout": 300,
+  "early_stop_patience": 5,
+  "clients_per_edge": 2,
+  "datasets": [
+    {
+      "name": "dataset_slices_sorted",
+      "path": "../datasets/dataset_slices_sorted",
+      "num_classes": 2,
+      "num_images": 4191
+    },
+    {
+      "name": "dataset_slices_sorted_augmented",
+      "path": "../datasets/dataset_slices_sorted_augmented",
+      "num_classes": 2,
+      "num_images": 16764
+    },
+    {
+      "name": "dataset_slices_sorted_T1",
+      "path": "../datasets/dataset_slices_sorted_T1",
+      "num_classes": 2,
+      "num_images": 1358
+    },
+    {
+      "name": "dataset_slices_sorted_T1_augmented",
+      "path": "../datasets/dataset_slices_sorted_T1_augmented",
+      "num_classes": 2,
+      "num_images": 5432
+    },
+    {
+      "name": "dataset_slices_sorted_T2",
+      "path": "../datasets/dataset_slices_sorted_T2",
+      "num_classes": 2,
+      "num_images": 1381
+    },
+    {
+      "name": "dataset_slices_sorted_T2_augmented",
+      "path": "../datasets/dataset_slices_sorted_T2_augmented",
+      "num_classes": 2,
+      "num_images": 5524
+    },
+    {
+      "name": "dataset_slices_sorted_Flair",
+      "path": "../datasets/dataset_slices_sorted_Flair",
+      "num_classes": 2,
+      "num_images": 1452
+    },
+    {
+      "name": "dataset_slices_sorted_Flair_augmented",
+      "path": "../datasets/dataset_slices_sorted_Flair_augmented",
+      "num_classes": 2,
+      "num_images": 5808
+    },
+    {
+      "name": "dataset_multy_sorted",
+      "path": "../datasets/dataset_multy_sorted",
+      "num_classes": 3,
+      "num_images": 4189
+    },
+    {
+      "name": "dataset_multy_sorted_augmented",
+      "path": "../datasets/dataset_multy_sorted_augmented",
+      "num_classes": 3,
+      "num_images": 16756
+    },
+    {
+      "name": "dataset_multy_sorted_T1",
+      "path": "../datasets/dataset_multy_sorted_T1",
+      "num_classes": 3,
+      "num_images": 1358
+    },
+    {
+      "name": "dataset_multy_sorted_T1_augmented",
+      "path": "../datasets/dataset_multy_sorted_T1_augmented",
+      "num_classes": 3,
+      "num_images": 5432
+    },
+    {
+      "name": "dataset_multy_sorted_T2",
+      "path": "../datasets/dataset_multy_sorted_T2",
+      "num_classes": 3,
+      "num_images": 1380
+    },
+    {
+      "name": "dataset_multy_sorted_T2_augmented",
+      "path": "../datasets/dataset_multy_sorted_T2_augmented",
+      "num_classes": 3,
+      "num_images": 5520
+    },
+    {
+      "name": "dataset_multy_sorted_Flair",
+      "path": "../datasets/dataset_multy_sorted_Flair",
+      "num_classes": 3,
+      "num_images": 1451
+    },
+    {
+      "name": "dataset_multy_sorted_Flair_augmented",
+      "path": "../datasets/dataset_multy_sorted_Flair_augmented",
+      "num_classes": 3,
+      "num_images": 5804
+    },
+    {
+      "name": "brain_tumor",
+      "path": "../datasets/brain_tumor/train",
+      "num_classes": 4,
+      "num_images": 5723
+    },
+    {
+      "name": "dataset_HAM1000",
+      "path": "../datasets/dataset_HAM1000/dataset",
+      "num_classes": 2,
+      "num_images": 4499
+    },
+    {
+      "name": "dataset_ISIC",
+      "path": "../datasets/dataset_ISIC/dataset",
+      "num_classes": 2,
+      "num_images": 2022
+    },
+    {
+      "name": "dataset_ISIC2",
+      "path": "../datasets/dataset_ISIC2",
+      "num_classes": 2,
+      "num_images": 12022
+    },
+    {
+      "name": "dataset_RD_colored",
+      "path": "../datasets/dataset_RD/colored_images",
+      "num_classes": 3,
+      "num_images": 1562
+    },
+    {
+      "name": "dataset_RD_colored_1",
+      "path": "../datasets/dataset_RD/colored_images_1",
+      "num_classes": 2,
+      "num_images": 2100
+    },
+    {
+      "name": "dataset_RD_kdr299",
+      "path": "../datasets/dataset_RD/kdr299_iimp",
+      "num_classes": 3,
+      "num_images": 1562
+    },
+    {
+      "name": "dataset_RD_kdr299_1",
+      "path": "../datasets/dataset_RD/kdr299_iimp_1",
+      "num_classes": 2,
+      "num_images": 2100
+    }
+  ],
+  "common_search_space": {
+    "encryption_mode": [
+      "no_encryption",
+      "homomorphic"
+    ],
+    "he_backend": [
+      "ckks"
+    ],
+    "device": [
+      "cuda"
+    ],
+    "global_epoch": [
+      5,
+      10,
+      20,
+      30
+    ],
+    "local_epoch": [
+      2,
+      5
+    ],
+    "num_clients": [
+      2,
+      4,
+      8
+    ],
+    "edge_rounds": [
+      2
+    ],
+    "models_percentage": [
+      1
+    ],
+    "learning_rate": [
+      0.001
+    ],
+    "batch_size": [
+      16
+    ],
+    "aggregation_algorithm": [
+      "FedAvg",
+      "FedProx"
+    ],
+    "fedprox_mu": [
+      0.05
+    ]
+  },
+  "model_specific_search_space": {
+    "GoogLeNet": {
+      "image_size": [
+        128,
+        224
+      ],
+      "num_custom_layers": [
+        2,
+        4
+      ]
+    },
+    "AlexNet": {
+      "image_size": [
+        128,
+        224
+      ],
+      "num_custom_layers": [
+        2,
+        4
+      ]
+    },
+    "ConvNet": {
+      "image_size": [
+        128,
+        224
+      ],
+      "convnet_hidden1": [
+        32
+      ],
+      "convnet_hidden2": [
+        16
+      ]
+    },
+    "ResNet18": {
+      "image_size": [
+        128,
+        224
+      ],
+      "num_custom_layers": [
+        2,
+        4
+      ]
+    },
+    "ResNet34": {
+      "image_size": [
+        128,
+        224
+      ],
+      "num_custom_layers": [
+        2,
+        4
+      ]
+    },
+    "ResNet50": {
+      "image_size": [
+        128,
+        224
+      ],
+      "num_custom_layers": [
+        2,
+        4
+      ]
+    },
+    "ResNet101": {
+      "image_size": [
+        128,
+        224
+      ],
+      "num_custom_layers": [
+        2,
+        4
+      ]
+    }
+  }
+}

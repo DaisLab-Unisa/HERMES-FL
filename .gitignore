@@ -1,0 +1,14 @@
+# IDE
+.idea/
+.vscode/
+
+# Python environment / bytecode
+.venv/
+__pycache__/
+*.pyc
+
+# Data
+datasets/
+
+# Runtime-generated key cache (TrustedAuthority CKKS context cache)
+**/temp_keys/
