@@ -32,7 +32,7 @@ Each client follows a **federated transfer learning** strategy: a pre-trained ba
   <img src="figures/star.png" alt="HERMES-FL star topology" width="60%">
 </p>
 
-<p align="center"><i><b>Figure 1.</b> Overview of the HERMES-FL star topology. Edge clients perform local training on private medical data, encrypt the updated classification layers, and transmit the ciphertexts directly to the central server for homomorphic aggregation.</i></p>
+<p align="center"><i><b>Figure 1.</b> Overview of the HERMES-FL star topology. The security authority distributes the CKKS public key and the private key shared by the clients. Starting from the initial model, each client trains locally on its private medical data, encrypts the updated classification layers, and transmits the ciphertexts through a secure channel directly to the central server, which aggregates them homomorphically and returns the encrypted updated model to the clients.</i></p>
 
 At round $t$, each selected client $C_i$ trains its head locally, encrypts the weights $\mathbf{w}^{(t)}_{C_i}$ with CKKS, and sends the ciphertext together with the size $Q_{C_i}$ of its training subset. The central server computes the data-weighted average entirely in the encrypted domain,
 
